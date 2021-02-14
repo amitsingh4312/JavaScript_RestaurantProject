@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodies Affair - Bill Generator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/bill.js"></script>
+</head>
+    <style>
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px 5px;
+            text-align: left;
+            border: 2px black;
+            border-style: groove;
+            
+        }
+        td, tr{
+            margin-left: 50px;
+        }
+        .aMenuHead{
+            text-align: left;
+            font-size: 2em;
+            padding-left: 15px;
+            border-left: 4px solid #DCA5DB ;
+        }
+        .aPrice{
+            text-align: center;
+        }
+        th{
+            text-align: center;
+        }
+        .aButton{
+            color: #000000;
+            background-color: #DADADA  ;
+            padding: 15px 15px;
+            border-radius: 25px;
+        }
+        .aButton:hover{
+            color: white;
+            background-color: black;
+        }
+        #aButtonCol{
+            text-align: center;
+        }
+        
+        #aResult{
+            text-align: center;
+            height: 70px;
+            width: 100%;
+        }
+        #aDiv{
+            text-align: center;
+        }
+        
+    </style>
+<body>
+     <header>
+        <div id="navbar">
+                <img id="logo" src="images/logo.png" alt="Logo"/>
+            <nav id="navspan">
+                <a href="index.html">Customer's Details</a>
+                <a href="toDo.html">Order Tracker</a>
+                <a href="billGenerator.html">Bill Generator</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <body>
+            <h2 style="text-align: center">Bill Calculator</h2>
+            
+            <img class="bodyimg" src="images/img2.jpg" alt="image2">
+        <table id="Breads">
+            
+            <tr>
+              <th>Items</th>
+              <th>Quantity</th>
+              <th>Price Per Serve</th>
+              <th>Total Price</th>
+            </tr>
+            <tr>
+                <td class="aMenuHead" colspan="4">Breads</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aRoti" name="aRoti" value="1.99"><label for="aRoti">Roti</label></td>
+              <td><input type="number" id="aRoti1" disabled min="1"></td>
+              <td class="aPrice">1.99</td>
+              <td><input type="number" id="aRoti2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aNaan" name="aNaan" value="2.99"><label for="aNaan">Naan</label></td>
+              <td><input type="number" id="aNaan1" disabled min="1"></td>
+              <td class="aPrice">2.99</td>
+              <td><input type="number" id="aNaan2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aParantha" name="aParantha" value="1.49"><label for="aParantha">Parantha</label></td>
+              <td><input type="number" id="aParantha1" disabled min="1"></td>
+              <td class="aPrice">1.49</td>
+              <td><input type="number" id="aParantha2" disabled></td>
+            </tr>
+            <tr>
+                <td class="aMenuHead" colspan="4">Curries</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aEggCurry" name="aEggCurry" value="2"><label for="aEggCurry">Egg Curry</label></td>
+              <td><input type="number" id="aEggCurry1" disabled min="1"></td>
+              <td class="aPrice">2.00</td>
+              <td><input type="number" id="aEggCurry2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aVegCurry" name="aVegCurry" value="1.49"><label for="aVegCurry">Veg Curry</label></td>
+              <td><input type="number" id="aVegCurry1" disabled min="1"></td>
+              <td class="aPrice">1.49</td>
+              <td><input type="number" id="aVegCurry2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aShahiPaneer" name="aShahiPaneer" value="3.99" ><label for="aShahiPaneer">Shahi Paneer</label></td>
+              <td><input type="number" id="aShahiPaneer1" disabled min="1"></td>
+              <td class="aPrice">3.99</td>
+              <td><input type="number" id="aShahiPaneer2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aChickenCurry" name="aChickenCurry" value="5"><label for="aChickenCurry">Chicken Curry</label></td>
+              <td><input type="number" id="aChickenCurry1" disabled min="1"></td>
+              <td class="aPrice">5.00</td>
+              <td><input type="number" id="aChickenCurry2" disabled></td>
+            </tr>
+
+            <tr>
+                <td class="aMenuHead" colspan="4">Salads</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aSprouts" name="aSprouts" value="1"><label for="aSprouts">Sprouts</label></td>
+              <td><input type="number" id="aSprouts1" disabled min="1"></td>
+              <td class="aPrice">1.00</td>
+              <td><input type="number" id="aSprouts2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aFruitSalad" name="aFruitSalad" value="1.99" ><label for="aFruitSalad">Fruit Salad</label></td>
+              <td><input type="number" id="aFruitSalad1" disabled min="1"></td>
+              <td class="aPrice">1.99</td>
+              <td><input type="number" id="aFruitSalad2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aVegSalad" name="aVegSalad" value="1.49"><label for="aVegSalad">Veg Salad</label></td>
+              <td><input type="number" id="aVegSalad1" disabled min="1"></td>
+              <td class="aPrice">1.49</td>
+              <td><input type="number" id="aVegSalad2" disabled></td>
+            </tr>
+            <tr>
+                <td class="aMenuHead" colspan="4">Sweet Dish</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aIceCream" name="aIceCream" value="4.99"><label for="aIceCream">IceCream</label></td>
+              <td><input type="number" id="aIceCream1" disabled min="1"></td>
+              <td class="aPrice">4.99</td>
+              <td><input type="number" id="aIceCream2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aGulaabJamun" name="aGulaabJamun" value="1.99"><label for="aGulaabJamun">Gulaab Jamun</label></td>
+              <td><input type="number" id="aGulaabJamun1" disabled min="1"></td>
+              <td class="aPrice">1.99</td>
+              <td><input type="number" id="aGulaabJamun2" disabled></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="aRasMalai" name="aRasMalai" value="4"><label for="aRasMalai">Ras Malai</label></td>
+              <td><input type="number" id="aRasMalai1" disabled min="1"></td>
+              <td class="aPrice">4.00</td>
+              <td><input type="number" id="aRasMalai2" disabled></td>
+            </tr>
+            <tr>
+                <td class="aMenuHead" colspan="4">Extra</td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Item Name"></td>
+                <td><input type="number" id="aExtra1" min="1" placeholder="Item Quantity"></td>
+                <td><input type="number" id="aExtra2" min="1" placeholder="Price per quantity"></td>
+                <td><input type="number" id="aExtra3" disabled></td>
+            </tr>
+            <tr>
+                <td id="aButtonCol"><input type="button" value="Calculate Bill" class="aButton" id="aButton"></td>
+                <td id="aResultTd1"><input type="number" disabled id="aResult1"></td>
+                <td id="aResultTd2"><input type="number" disabled id="aResult2"></td>
+                <td id="aResultTd3"><input type="number" disabled id="aResult3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total Amount</td>
+                <td>Tax Amount (8%)</td>
+                <td>Bill Amount</td>
+            </tr>
+
+          </table>
+        <div id="aDiv">
+            <h2 id="aDisc" hidden>Click The Button below to get additional discount!</h2>
+            <button class="aButton" id="aDiscount" hidden>Click Here to get Discount. Try Your Luck!</button>
+            <h2 id="aDiscountAmount"></h2>
+            
+            <h1 id="aFinalAmount"></h1>
+        </div>
+        
+        
+          
+    </body>
+    </main>
+
+    
+    <footer>
+            <div id="footer">
+                <div id="footer1">
+                    <p>Follow Us On:-</p>
+                    <a href="https://www.facebook.com/"><img src="images/fb.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="images/insta.png" alt="Instagram"></a>
+                    <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
+                </div>
+                <div id="footer2">
+                    <p>Copyright &copy; All rights reserved 2020. Made with ♡ by Group O. Kitchener, Canada(ON)</p>
+                    <p>Write us an email at: <a href="mailto:groupo@groupo.com">groupO@groupO.com</a></p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

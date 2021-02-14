@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodies Affair-Customer Details</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/index.js"></script>
+</head>
+<style>
+    table{
+        text-align: center;
+        margin: auto;
+    }
+    tr, td{
+        border-spacing: 15px;
+    }
+    input{
+        border-radius: 10px;
+        height: 40px;
+    }
+    #addValue{
+        width: 40%;
+        height: 40px;
+        border-radius: 15px;
+        margin-top: 25px;
+    }
+    #addValue:hover{
+        background-color: black;
+        color: white;
+    }
+    #delValue{
+        width: 40%;
+        height: 40px;
+        border-radius: 15px;
+        margin-top: 5px;
+    }
+    #delValue:hover{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+     <header>
+        <div id="navbar">
+                <img id="logo" src="images/logo.png" alt="Logo"/>
+            <nav id="navspan">
+                
+                <a href="index.html">Customer's Details</a>
+                <a href="toDo.html">Order Tracker</a>
+                <a href="billGenerator.html">Bill Generator</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div id="mainDiv">
+          
+            <h2 style="text-align: center">Please Share Your Details to help us serve You better</h2>
+            
+            <h1 id="amit"></h1>
+
+            <img class="bodyimg" src="images/img3.jpg" alt="image3">
+            <table>
+                <tr>
+                    <th>Phone Number</th>
+                    <th>Customer Name</th>
+                    <th>Customer Details</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="num" placeholder="Phone Number"></td>
+                    <td><input type="text" id="username" placeholder="Full Name"></td>
+                    <td><input type="text" id="address" placeholder="Address / Order Details" maxlength="100"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="3"><button id="addValue">Add Details</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button id="delValue">Delete all Details</button></td>
+                </tr>
+            
+            </table>
+
+
+            <h4 id="entry" style="margin: 0px 50px"></h4>
+        </div>
+    </main>
+
+    
+    <footer>
+            <div id="footer">
+                <div id="footer1">
+                    <p>Follow Us On:-</p>
+                    <a href="https://www.facebook.com/"><img src="images/fb.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="images/insta.png" alt="Instagram"></a>
+                    <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
+                </div>
+                <div id="footer2">
+                    <p>Copyright &copy; All rights reserved 2020. Made with ♡ by Group O. Kitchener, Canada(ON)</p>
+                    <p>Write us an email at: <a href="mailto:groupo@groupo.com">groupO@groupO.com</a></p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
